@@ -1,5 +1,7 @@
 package subway.domain;
 
+import static subway.utils.Constant.*;
+
 import java.util.Objects;
 
 public class Station {
@@ -26,5 +28,10 @@ public class Station {
     @Override
     public int hashCode() {
         return Objects.hash(name);
+    }
+
+    @Override
+    public String toString() {
+        return INFO_MESSAGE_PREFIX + this.name;
     }
 }

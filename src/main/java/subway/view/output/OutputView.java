@@ -1,5 +1,8 @@
 package subway.view.output;
 
+import java.util.List;
+
+import subway.domain.Station;
 
 public class OutputView {
 	public static String INFO_MESSAGE_PREFIX = "[INFO] ";
@@ -29,6 +32,13 @@ public class OutputView {
 
 	public static void finishRegisterStation() {
 		System.out.println(INFO_MESSAGE_PREFIX + "지하철 역이 등록되었습니다.");
+		printEmptyLine();
+	}
+
+	public static void printStationList(List<Station> stationList) {
+		for (Station station:stationList) {
+			System.out.println(station.toString());
+		}
 		printEmptyLine();
 	}
 }

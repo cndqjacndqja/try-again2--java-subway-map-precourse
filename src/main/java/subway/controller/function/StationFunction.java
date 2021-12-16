@@ -34,6 +34,7 @@ public enum StationFunction {
 		@Override
 		void function(Scanner scanner) {
 
+
 		}
 	},
 	BACK("B") {
