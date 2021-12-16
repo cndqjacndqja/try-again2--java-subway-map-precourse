@@ -25,7 +25,7 @@ public enum SectionFunction {
 			String lineName = inputLineNameForDeleteSection(scanner);
 			String stationName = inputStationNameForDeleteSection(scanner);
 			LineRepository.deleteSection(lineName, new Station(stationName));
-
+			printFinishDeleteSection();
 		}
 	},
 	BACK("BACK") {

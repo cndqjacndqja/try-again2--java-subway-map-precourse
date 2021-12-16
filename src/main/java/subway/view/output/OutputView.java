@@ -71,4 +71,9 @@ public class OutputView {
 		System.out.println(INFO_MESSAGE_PREFIX + "구간이 등록되었습니다.");
 		printEmptyLine();
 	}
+
+	public static void printFinishDeleteSection() {
+		System.out.println(INFO_MESSAGE_PREFIX + "구간이 삭제되었습니다.");
+		printEmptyLine();
+	}
 }
