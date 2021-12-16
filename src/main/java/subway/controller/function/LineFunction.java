@@ -19,6 +19,7 @@ public enum LineFunction {
 			validateIsExistLine(lineName);
 			Station startStation = new Station(inputStartStationForLineRegister(scanner));
 			Station endStation = new Station(inputEndStationForLineRegister(scanner));
+			validateIsSameStartStationAndEndStation(startStation, endStation);
 			LineRepository.addLine(new Line(lineName, startStation, endStation));
 			printFinishLineRegister();
 		}
