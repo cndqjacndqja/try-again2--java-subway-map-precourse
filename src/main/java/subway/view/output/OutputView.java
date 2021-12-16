@@ -58,4 +58,12 @@ public class OutputView {
 	public static void printFinishLineDelete() {
 		System.out.println(INFO_MESSAGE_PREFIX + "지하철 노선이 삭제되었습니다.");
 	}
+
+	public static void printSectionScreen() {
+		System.out.println("## 구간 관리 화면");
+		System.out.println("1. 구간 등록");
+		System.out.println("2. 구간 삭제");
+		System.out.println("B. 돌아가기");
+		printEmptyLine();
+	}
 }
