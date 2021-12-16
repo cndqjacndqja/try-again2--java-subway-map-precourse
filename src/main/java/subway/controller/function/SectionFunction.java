@@ -1,6 +1,7 @@
 package subway.controller.function;
 
 import static subway.view.input.InputView.*;
+import static subway.view.output.OutputView.*;
 
 import java.util.Scanner;
 
@@ -15,7 +16,7 @@ public enum SectionFunction {
 			String stationName = inputStationNameForSectionRegister(scanner);
 			int sequenceNumber = inputSequenceNumberForSectionRegister(scanner);
 			LineRepository.addSection(lineName, new Station(stationName), sequenceNumber);
-
+			printFinishSectionRegister();
 		}
 	},
 	DELETE("2") {

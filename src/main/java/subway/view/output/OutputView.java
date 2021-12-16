@@ -66,4 +66,9 @@ public class OutputView {
 		System.out.println("B. 돌아가기");
 		printEmptyLine();
 	}
+
+	public static void printFinishSectionRegister() {
+		System.out.println(INFO_MESSAGE_PREFIX + "구간이 등록되었습니다.");
+		printEmptyLine();
+	}
 }
