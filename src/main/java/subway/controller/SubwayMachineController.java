@@ -12,5 +12,8 @@ public class SubwayMachineController {
 		printMainScreen();
 		SubwayMachineFunction subwayMachineFunction = SubwayMachineFunction.findFunction(inputSubwayMainFunction(scanner));
 		subwayMachineFunction.apply(scanner);
+		if (!subwayMachineFunction.isQuit()) {
+			run(scanner);
+		}
 	}
 }
