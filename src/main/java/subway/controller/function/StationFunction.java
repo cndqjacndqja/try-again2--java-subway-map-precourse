@@ -6,12 +6,14 @@ import static subway.view.output.OutputView.*;
 import java.util.Arrays;
 import java.util.Scanner;
 
+import subway.domain.Station;
+import subway.domain.StationRepository;
 
 public enum StationFunction {
 	REGISTER("1") {
 		@Override
 		void function(Scanner scanner) {
-			inputRegisterStation(scanner);
+			StationRepository.addStation(new Station(inputRegisterStation(scanner)));
 			finishRegisterStation();
 		}
 	},

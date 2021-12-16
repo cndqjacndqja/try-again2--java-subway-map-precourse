@@ -11,6 +11,6 @@ public class StationController {
 	public void run(Scanner scanner) {
 		printStationManageScreen();
 		StationFunction stationFunction = StationFunction.findFunction(inputStationFunction(scanner));
-		stationFunction.apply();
+		stationFunction.apply(scanner);
 	}
 }
