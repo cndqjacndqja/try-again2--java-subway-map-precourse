@@ -27,14 +27,14 @@ public enum StationFunction {
 	DELETE("2") {
 		@Override
 		void function(Scanner scanner) {
+			StationRepository.deleteStation(inputDeleteStation(scanner));
 
 		}
 	},
 	FIND("3") {
 		@Override
 		void function(Scanner scanner) {
-
-
+			printStationList(StationRepository.stations());
 		}
 	},
 	BACK("B") {
