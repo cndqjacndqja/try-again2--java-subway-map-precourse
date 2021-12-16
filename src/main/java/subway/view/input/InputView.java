@@ -70,4 +70,9 @@ public class InputView {
 		System.out.println("## 순서를 입력하세요.");
 		return Integer.parseInt(scanner.nextLine());
 	}
+
+	public static String inputLineNameForDeleteSection(Scanner scanner) {
+		System.out.println("## 삭제할 구간의 노선을 입력하세요.");
+		return scanner.nextLine();
+	}
 }
