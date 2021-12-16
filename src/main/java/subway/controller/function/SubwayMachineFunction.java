@@ -60,4 +60,8 @@ public enum SubwayMachineFunction {
 	public void apply(Scanner scanner) {
 		function(scanner);
 	}
+
+	public boolean isQuit() {
+		return this == QUIT;
+	}
 }
