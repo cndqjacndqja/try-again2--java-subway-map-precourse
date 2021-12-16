@@ -1,6 +1,6 @@
 package subway.view;
 
-public class OutputView {
+public class MainOutputView {
 	public static void printMainScreen() {
 		System.out.println("## 메인 화면");
 		System.out.println("1. 역 관리");
@@ -14,4 +14,6 @@ public class OutputView {
 	public static void printEmptyLine() {
 		System.out.println();
 	}
+
+
 }
