@@ -1,7 +1,7 @@
 package subway.view.output;
 
 
-public class MainOutputView {
+public class OutputView {
 	public static void printMainScreen() {
 		System.out.println("## 메인 화면");
 		System.out.println("1. 역 관리");
