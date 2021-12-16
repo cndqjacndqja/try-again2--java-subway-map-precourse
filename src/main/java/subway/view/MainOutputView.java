@@ -1,5 +1,7 @@
 package subway.view;
 
+import static subway.view.EmptyOutView.*;
+
 public class MainOutputView {
 	public static void printMainScreen() {
 		System.out.println("## 메인 화면");
@@ -10,10 +12,4 @@ public class MainOutputView {
 		System.out.println("Q. 종료");
 		printEmptyLine();
 	}
-
-	public static void printEmptyLine() {
-		System.out.println();
-	}
-
-
 }
