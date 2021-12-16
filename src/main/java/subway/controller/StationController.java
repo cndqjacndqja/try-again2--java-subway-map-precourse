@@ -10,7 +10,12 @@ import subway.controller.function.StationFunction;
 public class StationController {
 	public void run(Scanner scanner) {
 		printStationManageScreen();
-		StationFunction stationFunction = StationFunction.findFunction(inputStationFunction(scanner));
-		stationFunction.apply(scanner);
+		try{
+			StationFunction stationFunction = StationFunction.findFunction(inputStationFunction(scanner));
+			stationFunction.apply(scanner);
+		}catch (IllegalArgumentException illegalArgumentException) {
+			System.out.println(illegalArgumentException.getMessage());
+			run(scanner);
+		}
 	}
 }
