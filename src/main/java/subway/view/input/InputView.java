@@ -5,13 +5,15 @@ import static subway.view.EmptyLineView.*;
 import java.util.Scanner;
 
 public class InputView {
+	public static String INPUT_FUNCTION_MESSAGE = "원하는 기능을 입력하세요.";
+
 	public static String inputSubwayMainFunction(Scanner scanner) {
-		System.out.println("원하는 기능을 입력하세요.");
+		System.out.println(INPUT_FUNCTION_MESSAGE);
 		return scanner.nextLine();
 	}
 
 	public static String inputStationFunction(Scanner scanner) {
-		System.out.println("원하는 기능을 입력하세요.");
+		System.out.println(INPUT_FUNCTION_MESSAGE);
 		return scanner.nextLine();
 	}
 
@@ -27,5 +29,10 @@ public class InputView {
 		String input = scanner.nextLine();
 		printEmptyLine();
 		return input;
+	}
+
+	public static String inputLineFunction(Scanner scanner) {
+		System.out.println(INPUT_FUNCTION_MESSAGE);
+		return scanner.nextLine();
 	}
 }
