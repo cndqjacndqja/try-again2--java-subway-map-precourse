@@ -50,4 +50,9 @@ public class InputView {
 		System.out.println("## 등록할 노선 이름을 입력하세요.");
 		return scanner.nextLine();
 	}
+
+	public static String inputLineNameForDeleteLine(Scanner scanner) {
+		System.out.println("## 삭제할 노선 이름을 입력하세요.");
+		return scanner.nextLine();
+	}
 }

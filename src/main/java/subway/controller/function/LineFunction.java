@@ -1,6 +1,7 @@
 package subway.controller.function;
 
 import static subway.view.input.InputView.*;
+import static subway.view.output.OutputView.*;
 
 import java.util.Arrays;
 import java.util.Scanner;
@@ -17,13 +18,13 @@ public enum LineFunction {
 			Station startStation = new Station(inputStartStationForLineRegister(scanner));
 			Station endStation = new Station(inputEndStationForLineRegister(scanner));
 			LineRepository.addLine(new Line(lineName, startStation, endStation));
-
+			printFinishLineRegister();
 		}
 	},
 	DELETE("2") {
 		@Override
 		void function(Scanner scanner) {
-
+			inputLineNameForDeleteLine(scanner);
 		}
 	},
 	FIND("3") {

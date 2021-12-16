@@ -50,4 +50,8 @@ public class OutputView {
 		System.out.println("B. 돌아가기");
 		printEmptyLine();
 	}
+
+	public static void printFinishLineRegister() {
+		System.out.println(INFO_MESSAGE_PREFIX + "지하철 노선이 등록되었습니다.");
+	}
 }
