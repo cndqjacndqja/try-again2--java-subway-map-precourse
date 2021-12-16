@@ -2,6 +2,8 @@ package subway.view.output;
 
 
 public class OutputView {
+	public static String INFO_MESSAGE_PREFIX = "[INFO] ";
+
 	public static void printMainScreen() {
 		System.out.println("## 메인 화면");
 		System.out.println("1. 역 관리");
@@ -23,5 +25,10 @@ public class OutputView {
 
 	public static void printEmptyLine() {
 		System.out.println();
+	}
+
+	public static void finishRegisterStation() {
+		System.out.println(INFO_MESSAGE_PREFIX + "지하철 역이 등록되었습니다.");
+		printEmptyLine();
 	}
 }
