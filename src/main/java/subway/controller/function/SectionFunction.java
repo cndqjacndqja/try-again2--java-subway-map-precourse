@@ -3,6 +3,7 @@ package subway.controller.function;
 import static subway.view.input.InputView.*;
 import static subway.view.output.OutputView.*;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 import subway.domain.LineRepository;
@@ -40,5 +41,17 @@ public enum SectionFunction {
 
 	SectionFunction(String command) {
 		this.command = command;
+	}
+
+	public static SectionFunction findFunction(String command) {
+		return Arrays.stream(values())
+			.filter(function -> function.command.equals(command))
+			.findFirst()
+			.orElseThrow(() -> new IllegalArgumentException("입력한 기능은 메뉴에 없습니다."));
+	}
+
+
+	public void apply(Scanner scanner) {
+		function(scanner);
 	}
 }
