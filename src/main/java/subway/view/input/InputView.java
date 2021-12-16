@@ -21,4 +21,11 @@ public class InputView {
 		printEmptyLine();
 		return input;
 	}
+
+	public static String inputDeleteStation(Scanner scanner) {
+		System.out.println("## 삭제할 역 이름을 입력하세요.");
+		String input = scanner.nextLine();
+		printEmptyLine();
+		return input;
+	}
 }
