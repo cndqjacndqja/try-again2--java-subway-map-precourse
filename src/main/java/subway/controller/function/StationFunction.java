@@ -37,10 +37,14 @@ public enum StationFunction {
 		this.command = command;
 	}
 
-	public StationFunction findFunction(String command) {
+	public static StationFunction findFunction(String command) {
 		return Arrays.stream(values())
 			.filter(function -> function.command.equals(command))
 			.findFirst()
 			.orElseThrow(() -> new IllegalArgumentException("입력한 기능은 메뉴에 없습니다."));
+	}
+
+	public void apply() {
+		function();
 	}
 }
