@@ -65,4 +65,9 @@ public class InputView {
 		System.out.println("## 역이름을 입력하세요.");
 		return scanner.nextLine();
 	}
+
+	public static int inputSequenceNumberForSectionRegister(Scanner scanner) {
+		System.out.println("## 순서를 입력하세요.");
+		return Integer.parseInt(scanner.nextLine());
+	}
 }
