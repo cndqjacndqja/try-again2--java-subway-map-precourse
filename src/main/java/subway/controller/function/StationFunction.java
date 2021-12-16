@@ -13,7 +13,14 @@ public enum StationFunction {
 	REGISTER("1") {
 		@Override
 		void function(Scanner scanner) {
-			StationRepository.addStation(new Station(inputRegisterStation(scanner)));
+			Station station = new Station(inputRegisterStation(scanner));
+			try{
+				StationRepository.isCheckDuplicate(station);
+			}catch (IllegalArgumentException illegalArgumentException) {
+				function(scanner);
+				return;
+			}
+			StationRepository.addStation(station);
 			finishRegisterStation();
 		}
 	},

@@ -1,7 +1,7 @@
 package subway.controller;
 
-import static subway.view.InputView.*;
-import static subway.view.OutputView.*;
+import static subway.view.input.InputView.*;
+import static subway.view.output.OutputView.*;
 
 import java.util.Scanner;
 
