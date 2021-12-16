@@ -12,6 +12,12 @@ public class LineValidator {
 		}
 	}
 
+	public static void validateIsNotExistLine(String lineName) {
+		if (!LineRepository.isExistByName(lineName)) {
+			throw new IllegalArgumentException(ERROR_MESSAGE_PREFIX + "존재하지 않는 노선입니다.");
+		}
+	}
+
 	public static void validateIsSameStartStationAndEndStation(Station startStation, Station endStation) {
 		if (startStation.equals(endStation)) {
 			throw new IllegalArgumentException(ERROR_MESSAGE_PREFIX + "상행점 역과 하행점 역이 같습니다.");

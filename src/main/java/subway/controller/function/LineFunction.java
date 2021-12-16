@@ -27,7 +27,9 @@ public enum LineFunction {
 	DELETE("2") {
 		@Override
 		void function(Scanner scanner) {
-			LineRepository.deleteLineByName(inputLineNameForDeleteLine(scanner));
+			String lineName = inputLineNameForDeleteLine(scanner);
+			LineRepository.deleteLineByName(lineName);
+			validateIsNotExistLine(lineName);
 			printFinishLineDelete();
 		}
 	},
