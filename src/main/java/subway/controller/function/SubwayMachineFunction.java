@@ -1,11 +1,14 @@
 package subway.controller.function;
 
+import static subway.view.output.OutputView.*;
+
 import java.util.Arrays;
 import java.util.Scanner;
 
 import subway.controller.LineController;
 import subway.controller.SectionController;
 import subway.controller.StationController;
+import subway.domain.LineRepository;
 
 public enum SubwayMachineFunction {
 	STATION_MANAGEMENT("1") {
@@ -32,7 +35,7 @@ public enum SubwayMachineFunction {
 	PRINT_SUBWAY_MAP("4") {
 		@Override
 		void function(Scanner scanner) {
-
+			printSubwayMap(LineRepository.getToString());
 		}
 	},
 	QUIT("Q") {

@@ -76,4 +76,9 @@ public class OutputView {
 		System.out.println(INFO_MESSAGE_PREFIX + "구간이 삭제되었습니다.");
 		printEmptyLine();
 	}
+
+	public static void printSubwayMap(String subwayMap) {
+		System.out.println("## 지하철 노선도");
+		System.out.println(subwayMap);
+	}
 }

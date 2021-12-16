@@ -45,4 +45,13 @@ public class LineRepository {
         }
         return false;
     }
+
+    public static String getToString() {
+        StringBuilder stringBuilder = new StringBuilder();
+        lines().stream()
+            .forEach(line -> {
+                stringBuilder.append(line.toString());
+            });
+        return stringBuilder.toString();
+    }
 }
