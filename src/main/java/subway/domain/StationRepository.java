@@ -19,4 +19,12 @@ public class StationRepository {
     public static boolean deleteStation(String name) {
         return stations.removeIf(station -> Objects.equals(station.getName(), name));
     }
+
+    public static void isCheckDuplicate(Station station) {
+        for (Station stationOfStations: stations) {
+            if (stationOfStations.equals(station)) {
+                throw new IllegalArgumentException("중복된 역입니다.");
+            }
+        }
+    }
 }
