@@ -54,4 +54,8 @@ public class OutputView {
 	public static void printFinishLineRegister() {
 		System.out.println(INFO_MESSAGE_PREFIX + "지하철 노선이 등록되었습니다.");
 	}
+
+	public static void printFinishLineDelete() {
+		System.out.println(INFO_MESSAGE_PREFIX + "지하철 노선이 삭제되었습니다.");
+	}
 }
