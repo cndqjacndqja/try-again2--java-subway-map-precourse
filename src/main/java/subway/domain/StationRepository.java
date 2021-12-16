@@ -27,4 +27,8 @@ public class StationRepository {
             }
         }
     }
+
+    public static boolean isExist(Station station) {
+        return stations.contains(station);
+    }
 }

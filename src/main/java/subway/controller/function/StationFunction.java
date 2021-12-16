@@ -1,5 +1,6 @@
 package subway.controller.function;
 
+import static subway.utils.valitor.StationValidator.*;
 import static subway.view.input.InputView.*;
 import static subway.view.output.OutputView.*;
 
@@ -27,8 +28,9 @@ public enum StationFunction {
 	DELETE("2") {
 		@Override
 		void function(Scanner scanner) {
-			StationRepository.deleteStation(inputDeleteStation(scanner));
-
+			String stationName = inputDeleteStation(scanner);
+			validateIsExistStation(new Station(stationName));
+			StationRepository.deleteStation(stationName);
 		}
 	},
 	FIND("3") {
