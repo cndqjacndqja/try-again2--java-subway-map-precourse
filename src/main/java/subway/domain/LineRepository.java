@@ -19,4 +19,16 @@ public class LineRepository {
     public static boolean deleteLineByName(String name) {
         return lines.removeIf(line -> Objects.equals(line.getName(), name));
     }
+
+    public static void addSection(String lineName, Station station, int sequenceNumber) {
+        Line line = findLineByName(lineName);
+        line.addSection(station, sequenceNumber);
+    }
+
+    private static Line findLineByName(String lineName) {
+        return lines.stream()
+            .filter(lineOfLines -> lineOfLines.isSameName(lineName))
+            .findFirst()
+            .orElseThrow(() -> new IllegalArgumentException("노선의 이름이 존재하지 않습니다."));
+    }
 }

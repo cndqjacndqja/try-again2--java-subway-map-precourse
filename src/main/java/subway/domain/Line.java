@@ -17,5 +17,12 @@ public class Line {
         return name;
     }
 
-    // 추가 기능 구현
+
+    public void addSection(Station station, int sequenceNumber) {
+        stationList.add(sequenceNumber, station);
+    }
+
+    public boolean isSameName(String lineName) {
+        return name.equals(lineName);
+    }
 }
