@@ -1,5 +1,6 @@
 package subway.controller.function;
 
+import static subway.utils.valitor.LineValidator.*;
 import static subway.view.input.InputView.*;
 import static subway.view.output.OutputView.*;
 
@@ -15,6 +16,7 @@ public enum LineFunction {
 		@Override
 		void function(Scanner scanner) {
 			String lineName = inputLineNameForLineRegister(scanner);
+			validateIsExistLine(lineName);
 			Station startStation = new Station(inputStartStationForLineRegister(scanner));
 			Station endStation = new Station(inputEndStationForLineRegister(scanner));
 			LineRepository.addLine(new Line(lineName, startStation, endStation));

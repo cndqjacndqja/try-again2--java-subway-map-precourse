@@ -36,4 +36,13 @@ public class LineRepository {
         Line line = findLineByName(lineName);
         line.deleteSection(station);
     }
+
+    public static boolean isExistByName(String lineName) {
+        for (Line line: lines) {
+            if (line.isSameName(lineName)) {
+                return true;
+            }
+        }
+        return false;
+    }
 }
