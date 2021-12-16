@@ -5,10 +5,12 @@ import static subway.view.output.OutputView.*;
 
 import java.util.Scanner;
 
+import subway.controller.function.SubwayMachineFunction;
+
 public class SubwayMachineController {
 	public void run(Scanner scanner) {
 		printMainScreen();
-		inputSubwayMainFunction(scanner);
-
+		SubwayMachineFunction subwayMachineFunction = SubwayMachineFunction.findFunction(inputSubwayMainFunction(scanner));
+		subwayMachineFunction.apply(scanner);
 	}
 }
