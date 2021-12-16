@@ -75,4 +75,9 @@ public class InputView {
 		System.out.println("## 삭제할 구간의 노선을 입력하세요.");
 		return scanner.nextLine();
 	}
+
+	public static String inputStationNameForDeleteSection(Scanner scanner) {
+		System.out.println("## 삭제할 구간의 역을 입력하세요.");
+		return scanner.nextLine();
+	}
 }
