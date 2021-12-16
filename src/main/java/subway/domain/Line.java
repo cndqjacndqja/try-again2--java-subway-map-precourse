@@ -25,4 +25,8 @@ public class Line {
     public boolean isSameName(String lineName) {
         return name.equals(lineName);
     }
+
+    public void deleteSection(Station station) {
+        stationList.remove(station);
+    }
 }

@@ -22,6 +22,9 @@ public enum SectionFunction {
 	DELETE("2") {
 		@Override
 		void function(Scanner scanner) {
+			String lineName = inputLineNameForDeleteSection(scanner);
+			String stationName = inputStationNameForDeleteSection(scanner);
+			LineRepository.deleteSection(lineName, new Station(stationName));
 
 		}
 	},

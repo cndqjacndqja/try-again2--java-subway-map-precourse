@@ -31,4 +31,9 @@ public class LineRepository {
             .findFirst()
             .orElseThrow(() -> new IllegalArgumentException("노선의 이름이 존재하지 않습니다."));
     }
+
+    public static void deleteSection(String lineName, Station station) {
+        Line line = findLineByName(lineName);
+        line.deleteSection(station);
+    }
 }
