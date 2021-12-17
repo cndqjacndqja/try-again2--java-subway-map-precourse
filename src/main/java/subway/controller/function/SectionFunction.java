@@ -1,5 +1,6 @@
 package subway.controller.function;
 
+import static subway.utils.Constant.*;
 import static subway.view.input.InputView.*;
 import static subway.view.output.OutputView.*;
 
@@ -47,7 +48,7 @@ public enum SectionFunction {
 		return Arrays.stream(values())
 			.filter(function -> function.command.equals(command))
 			.findFirst()
-			.orElseThrow(() -> new IllegalArgumentException("입력한 기능은 메뉴에 없습니다."));
+			.orElseThrow(() -> new IllegalArgumentException(ERROR_MESSAGE_PREFIX + "입력한 기능은 메뉴에 없습니다."));
 	}
 
 

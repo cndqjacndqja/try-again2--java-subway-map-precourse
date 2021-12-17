@@ -8,6 +8,17 @@ import java.util.Objects;
 public class LineRepository {
     private static final List<Line> lines = new ArrayList<>();
 
+    static {
+        lines.add(new Line("2호선", new Station("교대역"), new Station("역삼역")));
+        lines.add(new Line("3호선", new Station("교대역"), new Station("매봉역")));
+        lines.add(new Line("신분당선", new Station("강남역"), new Station("양재시민의숲역")));
+
+        addSection("2호선", new Station("강남역"), 1);
+        addSection("3호선", new Station("남부터미널역"), 1);
+        addSection("3호선", new Station("양재역"), 2);
+        addSection("신분당선", new Station("양재역"), 1);
+    }
+
     public static List<Line> lines() {
         return Collections.unmodifiableList(lines);
     }
@@ -48,10 +59,7 @@ public class LineRepository {
 
     public static String getToString() {
         StringBuilder stringBuilder = new StringBuilder();
-        lines().stream()
-            .forEach(line -> {
-                stringBuilder.append(line.toString());
-            });
+        lines().forEach(line -> stringBuilder.append(line.toString()));
         return stringBuilder.toString();
     }
 }
